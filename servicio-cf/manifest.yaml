@@ -1,0 +1,12 @@
+---
+applications:
+  - name: alonsol-ta-test
+    buildpacks:
+      - sdk-for-nodejs
+    path: .
+    command: npm run start
+    instances: 1
+    memory: 512M
+    env:
+      API_KEY: XSgYOmlIldYyHg0nwGHnqic4apOOJn2urkn9U69tXxA0
+      API_URL: https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/1a057821-e0ea-4402-9e94-430b77cfe026
