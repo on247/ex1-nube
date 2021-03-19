@@ -1,9 +1,8 @@
 const express = require("express"),
     app = express();
-
 const process = require("process");
-
 const axios=require("axios");
+const cors = require("cors");
 
 const API_KEY = process.env.API_KEY;
 const API_URL = process.env.API_URL
@@ -11,6 +10,7 @@ const API_URL = process.env.API_URL
 const port = process.env.PORT || 8080;
 
 app.use(express.json())
+app.use(cors());
 app.get("/autor", (req, res) => {
    res.json({"autor":"Alonso Javier Lizaola Salazar"})
 });
