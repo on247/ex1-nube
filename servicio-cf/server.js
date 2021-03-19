@@ -30,6 +30,9 @@ app.post("/analisis", async (req, res)=> {
     catch(e){
         return res.json({"error":"Fallo peticion a TA con el error:"+e.response.data.error})
     }
+    let data=ta_response.data;
+    let tonos=data.document_tone.tones;
+    res.json(tonos)
  });
 
 app.listen(port);
