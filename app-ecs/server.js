@@ -1,8 +1,5 @@
 const express = require("express"),
-    app = express();
-
-const process = require("process");
-
+    app = express()
 const port = process.env.PORT || 8080;
 
 app.use("/app", express.static(__dirname + '/public'));
